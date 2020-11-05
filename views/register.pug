@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  link(link rel="stylesheet" href="/stylesheets/signin.css")
+  div(class="container text-center" id="login-form")
+    form( action="/login/logaction" method="post" class="form-signin" )
+      img(class="mb-4" src="/images/logo.jpg" alt="" width="150" height="150")
+      h1(class="h3 mb-3 font-weight-normal") Please sign up
+      label( for="inputEmail" class="sr-only") Full Name
+      input(type="text" id="inputFullname" class="form-control" placeholder="Full Name"  autofocus="")
+      label( for="inputEmail" class="sr-only") Email
+      input(type="email" id="inputEmail" class="form-control" placeholder="Email address")
+      label( for="inputEmail" class="sr-only") Password
+      input( type="password" id="inputPswd" class="form-control" placeholder="Password")
+      label( for="inputEmail" class="sr-only") Confirm Password
+      input( type="password" id="inputConfPswd" class="form-control" placeholder="Confirm Password")
+      div(class="checkbox mb-3")
+            input(type="checkbox" value="remember-me") 
+            label I agree to all terms and condition  
+      button(class="btn btn-lg btn-primary btn-block" type="submit") Register
+      a(href="/auth/login" class="btn btn-md btn-link") Login
+      p(class="mt-5 mb-3 text-muted") Quizlet 2020 
